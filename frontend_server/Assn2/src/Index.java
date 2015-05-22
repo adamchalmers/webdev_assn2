@@ -19,7 +19,12 @@ public class Index extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	RequestDispatcher view = request.getRequestDispatcher("/index.jsp");
-    	request.setAttribute("message", "Server message working!");
+    	if (request.isUserInRole("admin")) {
+        	request.setAttribute("message", "Welcome, administrator.");
+    	} else {
+    		request.setAttribute("message", "Server message working!");
+    	}
+    	request.setAttribute("username", request.getUserPrincipal().getName());
 		view.forward(request,response);
 	}
 

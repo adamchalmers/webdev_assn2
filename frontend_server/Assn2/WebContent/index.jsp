@@ -12,6 +12,7 @@
 <h2>Hello world!</h2>
 
 <p>${message}</p>
+<p>You are logged in as ${username}.</p>
 
 </body>
 </html>
