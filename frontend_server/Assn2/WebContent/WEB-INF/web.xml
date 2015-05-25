@@ -3,8 +3,8 @@
   <login-config>
   	<auth-method>FORM</auth-method>
   	<form-login-config>
-  		<form-login-page>/index.jsp</form-login-page>
-  		<form-error-page>/index.jsp</form-error-page>
+  		<form-login-page>/login.jsp</form-login-page>
+  		<form-error-page>/login_fail.html</form-error-page>
   	</form-login-config>
   </login-config>
   
@@ -18,7 +18,8 @@
   <security-constraint>
   	<web-resource-collection>
   		<web-resource-name>protected</web-resource-name>
-  		<url-pattern>/protected.jsp</url-pattern>
+  		<url-pattern>/shipping</url-pattern>
+  		<url-pattern>/fakeShipping</url-pattern>
   	</web-resource-collection>
   	<auth-constraint>
   		<role-name>user</role-name>

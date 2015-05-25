@@ -12,19 +12,13 @@ import javax.servlet.http.HttpServletResponse;
  * This class handles survey submitted by the user and displays results in another JSP
  */
 
-@WebServlet("/index.html")
+@WebServlet("/index")
 public class Index extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	RequestDispatcher view = request.getRequestDispatcher("/index.jsp");
-    	/*if (request.isUserInRole("admin")) {
-        	request.setAttribute("message", "Welcome, administrator.");
-    	} else {
-    		request.setAttribute("message", "Server message working!");
-    	}
-    	request.setAttribute("username", request.getUserPrincipal().getName());*/
 		view.forward(request,response);
 	}
 

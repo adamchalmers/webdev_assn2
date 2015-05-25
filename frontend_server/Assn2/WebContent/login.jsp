@@ -49,13 +49,13 @@
 		
 	</ul>
 	<div id="tabs-1">
-	<form action="#" method="post">
+	<form action="j_security_check" method="post">
 	<div class="6u">
-												<input type="text" name="name" placeholder="Username" />
+												<input type="text" name="j_username" placeholder="Username" />
 											</div></br>
 											
 											<div class="6u">
-												<input type="password" name="pass" placeholder="Password" />
+												<input type="password" name="j_password" placeholder="Password" />
 											</div></br>
 											<button id="login">Login</button>
 	</form>
